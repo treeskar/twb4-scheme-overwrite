@@ -1,0 +1,22 @@
+{
+  "name": "change-color-scheme",
+  "version": "1.0.0",
+  "description": "Overwrite Bootstrap 4 color scheme example",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run sass:build && npm run sass:watch\" \"npm run serve\"",
+    "sass:watch": "node-sass -w index.scss index.css",
+    "sass:build": "node-sass index.scss index.css",
+    "serve": "lite-server -c dev-server-config.json"
+  },
+  "author": "Treeskar",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "lite-server": "^2.3.0",
+    "node-sass": "^4.5.3"
+  }
+}
